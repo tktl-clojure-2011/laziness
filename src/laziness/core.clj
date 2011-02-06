@@ -31,4 +31,7 @@
 (defn nonempty-tails [a-seq]
   ":(")
 
+(defn subseqs [a-seq]
+  ":(")
+
 ;(

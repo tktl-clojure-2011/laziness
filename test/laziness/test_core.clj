@@ -57,3 +57,7 @@
          => (just [1 2 3 4] [2 3 4] [3 4] [4])
        (take 10 (nth (nonempty-tails (range)) 5))
          => (just [5 6 7 8 9 10 11 12 13 14]))
+
+(facts "subseqs"
+       (subseqs [1 2]) => (just [[1 2] [1] [2]] :in-any-order)
+       (subseqs [1 2 3 4]) => (just [[1 2 3 4] [1 2 3] [1 2] [1] [2 3 4] [2 3] [2] [3 4] [3] [4]] :in-any-order))
