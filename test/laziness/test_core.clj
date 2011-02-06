@@ -50,3 +50,10 @@
          => (just [0 1 2 3 4 5 6 7 8 9] [0 1 2 3 4 5 6 7 8 9])
        (sum-halve [1 1 2 4 8 16 30 2])
          => (just [1 1 2 4 8 16] [30 2]))
+
+(facts "nonempty-tails"
+       (nonempty-tails []) => empty?
+       (nonempty-tails (seq [1 2 3 4]))
+         => (just [1 2 3 4] [2 3 4] [3 4] [4])
+       (take 10 (nth (nonempty-tails (range)) 5))
+         => (just [5 6 7 8 9 10 11 12 13 14]))

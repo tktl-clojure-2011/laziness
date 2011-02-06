@@ -28,4 +28,7 @@
 (defn sum-halve [a-seq]
   ":(")
 
+(defn nonempty-tails [a-seq]
+  ":(")
+
 ;(
