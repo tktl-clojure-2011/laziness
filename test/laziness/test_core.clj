@@ -30,4 +30,4 @@
        (super-composite 6)  => 60
        (super-composite 7)  => 420
        (super-composite 8)  => 840
-       (super-composite 17) => 12252240)
+       (super-composite 12) => 27720)
