@@ -14,6 +14,11 @@
 (defn super-composite [n]
   ":(")
 
+(defn indexed
+  "Maps elements of a sequence from element to [index-in-sequence element]."
+  [s]
+  (map vector (range) s))
+
 (defn indexes [a-seq]
   ":(")
 
