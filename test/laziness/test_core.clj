@@ -31,3 +31,8 @@
        (super-composite 7)  => 420
        (super-composite 8)  => 840
        (super-composite 12) => 27720)
+
+(facts "indexes"
+       (indexes []) => empty?
+       (indexes [:cow :cow :cow]) => [0 1 2]
+       (take 10 (indexes (range))) => (range 10))

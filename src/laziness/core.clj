@@ -14,4 +14,7 @@
 (defn super-composite [n]
   ":(")
 
+(defn indexes [a-seq]
+  ":(")
+
 ;(
