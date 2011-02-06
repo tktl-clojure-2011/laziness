@@ -22,4 +22,7 @@
 (defn indexes [a-seq]
   ":(")
 
+(defn inits [a-seq]
+  ":(")
+
 ;(

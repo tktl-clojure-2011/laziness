@@ -36,3 +36,7 @@
        (indexes []) => empty?
        (indexes [:cow :cow :cow]) => [0 1 2]
        (take 10 (indexes (range))) => (range 10))
+
+(facts "inits"
+       (inits '(1 2 3 4))       => (just empty? [1] [1 2] [1 2 3] [1 2 3 4])
+       (take 5 (inits (range))) => (just empty? [0] [0 1] [0 1 2] [0 1 2 3]))
