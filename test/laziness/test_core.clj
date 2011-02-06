@@ -61,3 +61,15 @@
 (facts "subseqs"
        (subseqs [1 2]) => (just [[1 2] [1] [2]] :in-any-order)
        (subseqs [1 2 3 4]) => (just [[1 2 3 4] [1 2 3] [1 2] [1] [2 3 4] [2 3] [2] [3 4] [3] [4]] :in-any-order))
+
+(defn pred-or [& rst]
+  (fn [val] (reduce #(or %1 %2) (map #(% val) rst))))
+
+(facts "subseq-sum"
+       (subseq-sum 0 [0 1 2 3 4 5])  => (just 0)
+       (subseq-sum 9 [1 2 3 4 5])    => (just 2 3 4)
+       (subseq-sum 12 [1 1 1])       => nil
+       (subseq-sum 39 (range 100))
+         => (pred-or (just [4 5 6 7 8 9])
+                     (just [12 13 14])
+                     (just [39])))

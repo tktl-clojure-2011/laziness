@@ -34,4 +34,7 @@
 (defn subseqs [a-seq]
   ":(")
 
+(defn subseq-sum [sum a-seq]
+  ":(")
+
 ;(
