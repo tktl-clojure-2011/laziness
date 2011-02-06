@@ -25,4 +25,7 @@
 (defn inits [a-seq]
   ":(")
 
+(defn sum-halve [a-seq]
+  ":(")
+
 ;(

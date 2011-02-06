@@ -40,3 +40,13 @@
 (facts "inits"
        (inits '(1 2 3 4))       => (just empty? [1] [1 2] [1 2 3] [1 2 3 4])
        (take 5 (inits (range))) => (just empty? [0] [0 1] [0 1 2] [0 1 2 3]))
+
+(facts "sum-halve"
+       (sum-halve [1 1 1 1])
+         => (just [1 1] [1 1])
+       (sum-halve [1 2 3 6])
+         => (just [1 2 3] [6])
+       (sum-halve (concat (range 10) (range 10)))
+         => (just [0 1 2 3 4 5 6 7 8 9] [0 1 2 3 4 5 6 7 8 9])
+       (sum-halve [1 1 2 4 8 16 30 2])
+         => (just [1 1 2 4 8 16] [30 2]))
