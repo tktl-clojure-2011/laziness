@@ -7,3 +7,6 @@
 
 (defn counting-spider [urls]
   ":(")
+
+(defn print-squares [up-to]
+  ":(")

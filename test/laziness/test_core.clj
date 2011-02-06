@@ -17,3 +17,8 @@
            (counting-spider urls))
              => [[0 1 2]
                  (apply str (map #(str "Fetching " % "\n") urls))]))
+
+(facts "print-squares"
+       (capturing-output
+         (print-squares 4))
+           => [nil (apply str (map #(str % "\n") [0 1 4 9]))])
