@@ -1,4 +1,5 @@
-(ns laziness.core)
+(ns laziness.core
+  (:use [clojure.java.io :only (reader as-url)]))
 
 (defn url-get [url]
   (with-open [in (reader (as-url url))]
