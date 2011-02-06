@@ -22,3 +22,12 @@
        (capturing-output
          (print-squares 4))
            => [nil (apply str (map #(str % "\n") [0 1 4 9]))])
+
+(facts "super-composite"
+       (super-composite 3)  => 6
+       (super-composite 4)  => 12
+       (super-composite 5)  => 60
+       (super-composite 6)  => 60
+       (super-composite 7)  => 420
+       (super-composite 8)  => 840
+       (super-composite 17) => 12252240)
