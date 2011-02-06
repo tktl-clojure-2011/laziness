@@ -73,3 +73,10 @@
          => (pred-or (just [4 5 6 7 8 9])
                      (just [12 13 14])
                      (just [39])))
+
+(facts "subseqs and subseq-sum should work on infinite sequences"
+       (take 10 (subseqs (range)))
+         => (just [[0] [0 1] [1] [0 1 2] [1 2] [2] [0 1 2 3] [1 2 3] [2 3] [3]]
+                  :in-any-order)
+       (subseq-sum 39 (range)) => (just [4 5 6 7 8 9]
+                                        :in-any-order))
